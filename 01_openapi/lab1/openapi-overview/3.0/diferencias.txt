@@ -1,0 +1,28 @@
+OAS 3.0 introdujo una serie de cambios en la forma en que se puede definir 
+el cuerpo de una solicitud y una respuesta. Un cambio significativo es que los 
+parámetros body y formdata se han eliminado y reemplazado con requestBody. 
+RequestBody es más flexible porque le permite consumir diferentes tipos de 
+medios, como JSON, XML, datos de formularios, texto sin formato y otros, y 
+usar diferentes esquemas para diferentes tipos de medios.
+
+Ejemplo:
+
+
+Definiciones de seguridad mejoradas
+
+Si bien la estructura de las definiciones de seguridad en OAS 3.0 sigue siendo 
+consistente con OAS 2.0, hay algunos cambios clave que afectarán la forma en que 
+describa los flujos de seguridad. Uno de los cambios más notables es que se cambió 
+el nombre de los flujos de OAuth 2 para que coincidan con la Especificación 
+de OAuth 2: accessCode ahora es AuthorizationCode, y la aplicación ahora es 
+clientCredentials.
+
+Los cambios adicionales incluyen:
+
+    securityDefinitions se renombró a securitySchemes y se movió dentro de los componentes.
+    type: basic fue reemplazado por type: http y esquema: basic.
+    El nuevo tipo: http es un tipo general para todos los esquemas de seguridad HTTP, 
+    incluidos Basic, Bearer y otros, y la palabra clave del esquema indica el tipo de esquema.
+    Las claves de API ahora se pueden enviar en: cookie.
+    Se agregó soporte para OpenID Connect Discovery (tipo: openIdConnect).
+    Los esquemas de seguridad de OAuth 2 ahora pueden definir múltiples flujos.

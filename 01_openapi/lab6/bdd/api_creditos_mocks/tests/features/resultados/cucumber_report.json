@@ -1,0 +1,2764 @@
+[
+  {
+    "description": "    Yo como desarrollador de apis y microservicios, negocio me solicita poder crear creditos para los clientes de banco poder para ampliar su cartera de credito",
+    "keyword": "Feature",
+    "name": "",
+    "line": 1,
+    "id": "",
+    "tags": [],
+    "uri": "features/creditos.feature",
+    "elements": [
+      {
+        "id": ";creacion-de-un-creditos-bancarios-ofertados-por-banco-poder-/creditos/versionapi",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "Creacion de un creditos bancarios ofertados por banco poder /creditos/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I set body to {\"pais\":\"Mexico\",\"canal\":\"1\",\"sucursal\":{\"id\":\"54\",\"nombre\":\"Sucursal Leones\",\"telefono\":\"5580965421\",\"estado\":\"43\",\"municipio\":\"10\",\"numero\":\"50392\"},\"producto\":\"5\",\"monto\":\"20000\",\"plazo\":\"2\",\"referencias\":[{\"nombre\":\"Israel\",\"apellidos\":\"Ortiz Feria\",\"tipoReferencia\":\"Companero de Trabajo\",\"aniosConocimiento\":\"5\"}]}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I POST to `host`/creditos/`versionApi`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "response code should be 201",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "response body path $.mensaje should be La solicitud del crédito se genero correctamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "response body path $.codigo should be 201",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "response body path $.detalles.idCredito should be 1100305940",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "response body path $.detalles.pais should be Mexico",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "response body path $.detalles.canal should be 1",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "response body path $.detalles.sucursal.id should be 54",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "response body path $.detalles.sucursal.nombre should be Sucural Leones",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "response body path $.detalles.sucursal.telefono should be 5580965421",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "response body path $.detalles.sucursal.estado should be 43",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "response body path $.detalles.sucursal.municipio should be 10",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "response body path $.detalles.sucursal.numero should be 50392",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "response body path $.detalles.cliente should be 391849",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "response body path $.detalles.producto should be 5",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "response body path $.detalles.monto should be 20000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "response body path $.detalles.plazo should be 2",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "response body path $.detalles.fecha should be 2019-02-17",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "response body path $.detalles.referencias[0].nombre should be Israel",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "response body path $.detalles.referencias[0].apellidos should be Ortiz Feria",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "response body path $.detalles.referencias[0].tipoReferencia should be Compañero de Trabajo",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "response body path $.detalles.referencias[0].aniosConocimiento should be 5",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";creacion-de-un-credito-con-datos-incorrectos-/creditos/versionapi",
+        "keyword": "Scenario",
+        "line": 50,
+        "name": "Creacion de un credito con datos incorrectos /creditos/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 38,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "I set bearer token",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:235"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "I set body to {\"pais\":\"Mexico\",\"canal\":\"1x\",\"sucursal\":{\"id\":\"54\",\"nombre\":\"Sucursal Leones\",\"telefono\":\"5580965421\",\"estado\":\"43\",\"municipio\":\"10\",\"numero\":\"50392\"},\"producto\":\"5\",\"monto\":\"20000\",\"plazo\":\"2\",\"referencias\":[{\"nombre\":\"Israel\",\"apellidos\":\"Ortiz Feria\",\"tipoReferencia\":\"Companero de Trabajo\",\"aniosConocimiento\":\"5\"}]}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "I POST to `host`/creditos/`versionApi`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "response code should be 400",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "response body path $.codigo should be 400.api-creditos.1000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "response body path $.mensaje should be Los datos del credito contienen caracteres invalidos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "response body path $.informacion should be Debes introducir correctamente los datos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 47,
+            "name": "response body path $.tracking should be 98755343",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";creacion-de-un-credito-con-un-evento-inesperado-en-el-proceso-/creditos/versionapi",
+        "keyword": "Scenario",
+        "line": 66,
+        "name": "Creacion de un credito con un evento inesperado en el proceso /creditos/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 54,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "I set bearer token",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:235"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "I set body to {\"pais\":\"USA\",\"canal\":\"2\",\"sucursal\":{\"id\":\"89\",\"nombre\":\"Sucursal Texas\",\"telefono\":\"549495938294\",\"estado\":\"1\",\"municipio\":\"90\",\"numero\":\"60392\"},\"producto\":\"5\",\"monto\":\"10000\",\"plazo\":\"24\",\"referencias\":[{\"nombre\":\"Olivia\",\"apellidos\":\"Castillo Zarate\",\"tipoReferencia\":\"Vecina\",\"aniosConocimiento\":\"1\"}]}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 57,
+            "name": "I POST to `host`/creditos/`versionApi`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 58,
+            "name": "response code should be 500",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 60,
+            "name": "response body path $.codigo should be 500.api-creditos.1200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 61,
+            "name": "response body path $.mensaje should be Error al realizar la operación.",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 62,
+            "name": "response body path $.informacion should be Ocurrio un error inesperado, intentar nuevamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 63,
+            "name": "response body path $.tracking should be 22920181120162829642",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": ";actualizacion-de-los-datos-de-un-credito-/creditos/versionapi",
+        "keyword": "Scenario",
+        "line": 97,
+        "name": "actualizacion de los datos de un credito /creditos/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 70,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 71,
+            "name": "I set bearer token",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:235"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 72,
+            "name": "I set body to {\"pais\":\"Mexico\",\"canal\":\"1\",\"sucursal\":{\"id\":\"34\",\"nombre\":\"Sucursal Cuernavaca\",\"telefono\":\"7776785434\",\"estado\":\"12\",\"municipio\":\"8\",\"numero\":\"20567\"},\"producto\":\"5\",\"monto\":\"10000\",\"plazo\":\"36\",\"referencias\":[{\"nombre\":\"Israel\",\"apellidos\":\"Ortiz Feria\",\"tipoReferencia\":\"Companero de Trabajo\",\"aniosConocimiento\":\"5\"}]}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 73,
+            "name": "I PUT `host`/creditos/`versionApi`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:108"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 74,
+            "name": "response code should be 200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 75,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 76,
+            "name": "response body path $.mensaje should be La solicitud de credito se ha actualizado exitosamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 77,
+            "name": "response body path $.codigo should be 200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 78,
+            "name": "response body path $.detalles.idCredito should be 1100305940",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 79,
+            "name": "response body path $.detalles.pais should be Mexico",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 80,
+            "name": "response body path $.detalles.canal should be 1",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 81,
+            "name": "response body path $.detalles.sucursal.id should be 34",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 82,
+            "name": "response body path $.detalles.sucursal.nombre should be Sucursal Cuernavaca",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 83,
+            "name": "response body path $.detalles.sucursal.telefono should be 7776785434",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 84,
+            "name": "response body path $.detalles.sucursal.estado should be 12",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 85,
+            "name": "response body path $.detalles.sucursal.municipio should be 8",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 86,
+            "name": "response body path $.detalles.sucursal.numero should be 20567",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 87,
+            "name": "response body path $.detalles.producto should be 5",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 88,
+            "name": "response body path $.detalles.monto should be 1000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 89,
+            "name": "response body path $.detalles.plazo should be 36",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 90,
+            "name": "response body path $.detalles.referencias[0].nombre should be Israel",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 91,
+            "name": "response body path $.detalles.referencias[0].apellidos should be Ortiz Feria",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 92,
+            "name": "response body path $.detalles.referencias[0].tipoReferencia should be Compañero de Trabajo",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 93,
+            "name": "response body path $.detalles.referencias[0].aniosConocimiento should be 5",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";actualizacion-de-los-datos-de-un-credito-con-datos-incorrectos-/creditos/versionapi",
+        "keyword": "Scenario",
+        "line": 113,
+        "name": "actualizacion de los datos de un credito con datos incorrectos /creditos/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 101,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 102,
+            "name": "I set bearer token",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:235"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 103,
+            "name": "I set body to {\"pais\":\"Mexico\",\"canal\":\"x\",\"sucursal\":{\"id\":\"34\",\"nombre\":\"Sucursal Cuernavaca\",\"telefono\":\"7776785434\",\"estado\":\"12\",\"municipio\":\"8\",\"numero\":\"20567\"},\"producto\":\"5\",\"monto\":\"10000\",\"plazo\":\"36\",\"referencias\":[{\"nombre\":\"Israel\",\"apellidos\":\"Ortiz Feria\",\"tipoReferencia\":\"Companero de Trabajo\",\"aniosConocimiento\":\"5\"}]}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 104,
+            "name": "I PUT `host`/creditos/`versionApi`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:108"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 105,
+            "name": "response code should be 400",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 106,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 107,
+            "name": "response body path $.codigo should be 400.api-creditos.1000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 108,
+            "name": "response body path $.mensaje should be Los datos del credito contienen caracteres invalidos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 109,
+            "name": "response body path $.informacion should be Debes introducir correctamente los datos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 110,
+            "name": "response body path $.tracking should be 98755343",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";actualizacion-de-los-datos-de-un-credito,-con-un-evento-inesperado-en-el-proceso-/creditos/versionapi",
+        "keyword": "Scenario",
+        "line": 129,
+        "name": "actualizacion de los datos de un credito, con un evento inesperado en el proceso /creditos/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 117,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 118,
+            "name": "I set bearer token",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:235"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 119,
+            "name": "I set body to {\"pais\":\"Mexico\",\"canal\":\"2\",\"sucursal\":{\"id\":\"34\",\"nombre\":\"Sucursal Cuernavaca\",\"telefono\":\"7776785434\",\"estado\":\"12\",\"municipio\":\"8\",\"numero\":\"20567\"},\"producto\":\"5\",\"monto\":\"10000\",\"plazo\":\"36\",\"referencias\":[{\"nombre\":\"Israel\",\"apellidos\":\"Ortiz Feria\",\"tipoReferencia\":\"Companero de Trabajo\",\"aniosConocimiento\":\"5\"}]}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 120,
+            "name": "I PUT `host`/creditos/`versionApi`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:108"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 121,
+            "name": "response code should be 500",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 122,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 123,
+            "name": "response body path $.codigo should be 500.api-creditos.1200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 124,
+            "name": "response body path $.mensaje should be Error al realizar la operación.",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 125,
+            "name": "response body path $.informacion should be Ocurrio un error inesperado, intentar nuevamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 126,
+            "name": "response body path $.tracking should be 22920181120162829642",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";obtener-la-información-de-un-credito-via-su-identificador-/creditos/versionapi",
+        "keyword": "Scenario",
+        "line": 157,
+        "name": "Obtener la información de un credito via su identificador /creditos/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 133,
+            "name": "I set bearer token",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:235"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 134,
+            "name": "I GET `host`/creditos/`versionApi`?idCredito=1100305940",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 135,
+            "name": "response code should be 200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 136,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 137,
+            "name": "response body path $.idCredito should be 1100305940",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 138,
+            "name": "response body path $.pais should be Mexico",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 139,
+            "name": "response body path $.canal should be 1",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 140,
+            "name": "response body path $.sucursal.id should be 54",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 141,
+            "name": "response body path $.sucursal.nombre should be Sucural Leones",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 142,
+            "name": "response body path $.sucursal.telefono should be 5580965421",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 143,
+            "name": "response body path $.sucursal.estado should be 43",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 144,
+            "name": "response body path $.sucursal.municipio should be 10",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 145,
+            "name": "response body path $.sucursal.numero should be 50392",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 146,
+            "name": "response body path $.cliente should be 391849",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 147,
+            "name": "response body path $.producto should be 5",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 148,
+            "name": "response body path $.monto should be 20000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 149,
+            "name": "response body path $.plazo should be 2",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 150,
+            "name": "response body path $.fecha should be 2019-02-17",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 151,
+            "name": "response body path $.referencias[0].nombre should be Israel",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 152,
+            "name": "response body path $.referencias[0].apellidos should be Ortiz Feria",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 153,
+            "name": "response body path $.referencias[0].tipoReferencia should be Compañero de Trabajo",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 154,
+            "name": "response body path $.referencias[0].aniosConocimiento should be 5",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": ";validacion-cuando-consultamos-un-crédito-y-este-no-existe-/creditos/versionapi",
+        "keyword": "Scenario",
+        "line": 171,
+        "name": "Validacion cuando consultamos un crédito y este no existe /creditos/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 161,
+            "name": "I set bearer token",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:235"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 162,
+            "name": "I GET `host`/creditos/`versionApi`?idCredito=1100305941",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 163,
+            "name": "response code should be 404",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 164,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 165,
+            "name": "response body path $.codigo should be 404.api-creditos.1100",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 166,
+            "name": "response body path $.mensaje should be No existe la información solicitada.",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 167,
+            "name": "response body path $.id should be 143",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 168,
+            "name": "response body path $.descripcion should be ",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";baja-de-créditos-otorgados-a-clientes-/creditos/versionapi",
+        "keyword": "Scenario",
+        "line": 183,
+        "name": "baja de créditos otorgados a clientes /creditos/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 175,
+            "name": "I set bearer token",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:235"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 176,
+            "name": "I GET `host`/creditos/`versionApi`?idCredito=1100305939",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 177,
+            "name": "response code should be 200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 178,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 179,
+            "name": "response body path $.mensaje should be La solicitud de credito se ha dado de baja exitosamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 180,
+            "name": "response body path $.codigo should be 200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    Yo como desarrollador de apis y microservicios, negocio me solicita poder aprobar los créditos solicitados por los clientes",
+    "keyword": "Feature",
+    "name": "",
+    "line": 1,
+    "id": "",
+    "tags": [],
+    "uri": "features/creditos_aprobaciones.feature",
+    "elements": [
+      {
+        "id": ";aprobaciones-de-créditos-del-banco-poder-/creditos/versionapi/aprobaciones",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "aprobaciones de créditos del banco poder /creditos/versionApi/aprobaciones",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I set bearer token",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:235"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I set body to {\"idCredito\":\"1100305940\",\"idCliente\":\"391849\"}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I POST to `host`/creditos/`versionApi`/aprobaciones",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "response code should be 201",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "response body path $.mensaje should be La solicitud del crédito se aprobo exitosamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "response body path $.codigo should be 201",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";escenario-de-evento-inesperado-al-al-realizar-una-aprobacion-de-un-crédito-bancario-/creditos/versionapi",
+        "keyword": "Scenario",
+        "line": 32,
+        "name": "escenario de evento inesperado al al realizar una aprobacion de un crédito bancario /creditos/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I set bearer token",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:235"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I set body to {\"idCredito\":\"1200305940\",\"idCliente\":\"391849\"}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I POST to `host`/creditos/`versionApi`/aprobaciones",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "response code should be 500",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "response body path $.mensaje should be Error al realizar la operación.",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "response body path $.codigo should be 500.api-creditos.1200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "response body path $.informacion should be Ocurrio un error inesperado, intentar nuevamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "response body path $.tracking should be 22920181120162829642",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    Yo como desarrollador de apis y microservicios, negocio me solicita poder consultar toddos los pagos realizados por los clientes a un credito",
+    "keyword": "Feature",
+    "name": "",
+    "line": 1,
+    "id": "",
+    "tags": [],
+    "uri": "features/creditos_pagos.feature",
+    "elements": [
+      {
+        "id": ";obtener-la-información-del-saldo-actual-del-crédito",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Obtener la información del saldo actual del crédito",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I set bearer token",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:235"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I GET `host`/creditos/`versionApi`/1100305940/pagos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "response code should be 200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "response body path $.idCredito should be 1100305940",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "response body path $.capital should be 10000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "response body path $.intereses should be 0",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "response body path $.detalle[0].idPago should be 12",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "response body path $.detalle[0].fechaAplicacion should be 2019-02-20",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "response body path $.detalle[0].concepto should be Abono de credito autorizado",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "response body path $.detalle[0].importe should be 500",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";obtener-la-información-de-los-pagos-realizados-a-un-credito-con-un-evento-inesperado",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "Obtener la información de los pagos realizados a un credito con un evento inesperado",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I set bearer token",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:235"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I GET `host`/creditos/`versionApi`/1100305943/pagos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "response code should be 500",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "response body path $.codigo should be 500.api-creditos.1200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "response body path $.mensaje should be Error al realizar la operación.",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "response body path $.informacion should be Ocurrio un error inesperado, intentar nuevamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "response body path $.tracking should be 22920181120162829642",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    Yo como desarrollador de apis y microservicios, negocio me solicita poder consultar el saldo del credito actual solicitado por un cliente",
+    "keyword": "Feature",
+    "name": "",
+    "line": 1,
+    "id": "",
+    "tags": [],
+    "uri": "features/creditos_saldos.feature",
+    "elements": [
+      {
+        "id": ";obtener-la-información-del-saldo-actual-del-crédito",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Obtener la información del saldo actual del crédito",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I set bearer token",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:235"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I GET `host`/creditos/`versionApi`/1100305940/saldos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "response code should be 200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "response body path $.idCredito should be 1100305940",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "response body path $.monto should be 7000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "response body path $.montoLiquidacion should be 6500",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": ";obtener-la-información-del-saldo-actual-del-crédito-con-un-error-inesperado",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Obtener la información del saldo actual del crédito con un error inesperado",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I set bearer token",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:235"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I GET `host`/creditos/`versionApi`/1100305941/saldos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "response code should be 500",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "response body path $.codigo should be 500.api-creditos.1200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "response body path $.mensaje should be Error al realizar la operación.",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "response body path $.informacion should be Ocurrio un error inesperado, intentar nuevamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "response body path $.tracking should be 22920181120162829642",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

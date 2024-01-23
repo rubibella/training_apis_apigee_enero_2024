@@ -1,0 +1,146 @@
+---
+  swagger: "2.0"
+  info: 
+    version: "1.0.0"
+    title: "API de Seguros"
+    description: "API para administrar seguros de GNP, bajas, altas, modificaciones, autorizaciones."
+
+  host: "apixcloudservices.com"
+
+  basePath: "/seguros/v1"
+
+  schemes: 
+  - "https"
+
+  consumes: 
+    - "application/json"
+  produces: 
+    - "application/json"
+
+  paths: 
+    /: 
+      get: 
+        description: "consulta de polizas"
+        responses: 
+          "200":
+            description: "responde la informacion de las polizas existentes"
+            schema: 
+              type: "array"
+              items: 
+                $ref: "#/definitions/SegurosResponse"
+      post:
+        description: crear polizas
+        parameters:
+          - name: datos poliza
+            in: body
+            description: datos para crear una poliza
+            required: true
+            schema:
+              $ref: '#/definitions/SegurosRequest'
+        responses: 
+          "201":
+            description: "responde con la creacion del seguro"
+            schema: 
+              type: "array"
+              items: 
+                $ref: "#/definitions/SegurosResponse"      
+    /{id}: 
+      get: 
+        description: "consulta de polizas"
+        parameters:
+        - name: id
+          in: path
+          description: maximum number of results to return
+          required: true
+          type: integer          
+        responses: 
+          "200":
+            description: "responde la informacion de las polizas existentes"
+            schema: 
+              type: "array"
+              items: 
+                $ref: "#/definitions/SegurosResponse"
+      delete:
+        description: eliminar de forma logica un seguro
+        parameters:
+          - name: id
+            in: path
+            description: ID of pet to delete
+            required: true
+            type: integer
+            format: int64
+        responses:
+          "204":
+            description: dar de baja un seguro
+          default:
+            description: error inesperado
+            schema:
+              $ref: '#/definitions/Error'
+        
+
+    /{idSeguro}/beneficiarios:
+     get: 
+        description: "obtiene los beneficiarios de la poliza"
+        parameters:
+        - name: idSeguro
+          in: path
+          description: maximum number of results to return
+          required: true
+          type: integer   
+        responses: 
+          "200":
+            description: "responde unaa lista de beneficiarios"
+            schema: 
+              type: "array"
+              items: 
+                $ref: "#/definitions/BeneficiariosResponse"
+
+  definitions: 
+    SegurosResponse: 
+      type: "object"
+      properties: 
+        id: 
+          type: "integer"
+          format: "int64"
+        tipo: 
+          type: "string"
+        numero: 
+          type: "string"
+        ano: 
+          type: "string"
+    SegurosRequest: 
+      type: "object"
+      properties: 
+        tipo: 
+          type: "string"
+        numero: 
+          type: "string"
+        ano: 
+          type: "string"
+        
+    BeneficiariosResponse: 
+      type: "object"
+      properties: 
+        id: 
+          type: "integer"
+          format: "int64"
+        nombre: 
+          type: "string"
+        apellidoPaterno: 
+          type: "string"
+        apellidoMaterno: 
+          type: "string"
+        domicilio: 
+          type: "string"
+    Error:
+      type: "object"
+      required:
+        - codigo
+        - mensaje
+      properties:
+        codigo:
+          type: integer
+          format: int32
+        mensaje:
+          type: string
+       

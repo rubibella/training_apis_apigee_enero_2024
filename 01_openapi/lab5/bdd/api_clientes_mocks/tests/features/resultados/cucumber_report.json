@@ -1,0 +1,2202 @@
+[
+  {
+    "description": "    Yo como desarrollador de apis y microservicios, negocio me solicita poder consultar,crear,modificar y eliminar los clientes del banco poder para su administracion en el banco",
+    "keyword": "Feature",
+    "name": "",
+    "line": 4,
+    "id": "",
+    "tags": [],
+    "uri": "features/clientes.feature",
+    "elements": [
+      {
+        "id": ";obtener-la-información-del-cliente-via-el-recurso--/clientes/v1",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Obtener la información del cliente via el recurso  /clientes/v1",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I GET `host`/clientes/`versionApi`?idCliente=1000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "response code should be 200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "response body path $.id should be 1000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "response body path $.nombre should be Yaridel",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "response body path $.apellidoPaterno should be Arzate",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "response body path $.apellidoMaterno should be Landa",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "response body path $.edad should be 25",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "response body path $.rfc should be CUPU800825569",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "response body path $.email should be yaridelal435@gmail.com",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "response body path $.direccion should be calle esperanza, 10 de abril, Temixco Morelos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "response body path $.codigoPostal should be 62588",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "response body path $.referencias should be Frente a la base de camiones LOS PEPES",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "response body path $.genero should be F",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": ";obtener-la-información-del-cliente-via-el-recurso--/clientes/v1",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Obtener la información del cliente via el recurso  /clientes/v1",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I GET `host`/clientes/`versionApi`?idCliente=5000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "response code should be 200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "response body path $.id should be 5000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "response body path $.nombre should be Jovani",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "response body path $.apellidoPaterno should be Arzate",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "response body path $.apellidoMaterno should be Cabrera",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "response body path $.edad should be 28",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "response body path $.rfc should be 456787656453454sds",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "response body path $.email should be jovaniac@gmail.com",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "response body path $.direccion should be bugambilias 2, colonia 10 de abril, Temixco Morelos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "response body path $.codigoPostal should be 0634560",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "response body path $.referencias should be enfrente de la tortilleria ALFONSOS",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "response body path $.genero should be M",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";obtener-la-información-del-cliente-pero-validando-cuando-ingresamos-mal-los-datos-de-consulta-/clientes/versionapi",
+        "keyword": "Scenario",
+        "line": 40,
+        "name": "Obtener la información del cliente pero validando cuando ingresamos mal los datos de consulta /clientes/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I GET `host`/clientes/`versionApi`?idCliente=1000s",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "response code should be 400",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "response body path $.codigo should be 400.api-clientes.1000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "response body path $.mensaje should be Los datos del cliente contienen caracteres invalidos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "response body path $.informacion should be Debes introducir correctamente los datos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "response body path $.tracking should be 98755343",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";caso-donde-validamos-que-un-cliente-no-exista-/clientes/versionapi",
+        "keyword": "Scenario",
+        "line": 52,
+        "name": "Caso donde validamos que un cliente no exista /clientes/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "I GET `host`/clientes/`versionApi`?idCliente=5001",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "response code should be 404",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "response body path $.codigo should be 404.api-clientes.1100",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 47,
+            "name": "response body path $.mensaje should be No existe la información solicitada.",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 48,
+            "name": "response body path $.id should be 5001",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "response body path $.descripcion[0] should be ",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";obtener-la-información-del-cliente-pero-validando-cuando-ingresamos-mal-los-datos-de-consulta-/clientes/versionapi",
+        "keyword": "Scenario",
+        "line": 65,
+        "name": "Obtener la información del cliente pero validando cuando ingresamos mal los datos de consulta /clientes/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 56,
+            "name": "I GET `host`/clientes/`versionApi`?idCliente=2000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 57,
+            "name": "response code should be 500",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "response body path $.codigo should be 500.api-clientes.1200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 60,
+            "name": "response body path $.mensaje should be Error al realizar la operación.",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 61,
+            "name": "response body path $.informacion should be Ocurrio un error inesperado, intentar nuevamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 62,
+            "name": "response body path $.tracking should be 22920181120162829642",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";creacion-de-un-cliente-de-banco-poder-/clientes/versionapi",
+        "keyword": "Scenario",
+        "line": 90,
+        "name": "Creacion de un cliente de banco poder /clientes/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 69,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 70,
+            "name": "I set body to {\"nombre\": \"Yaridel\",\"apellidoPaterno\": \"Arzate\",\"apellidoMaterno\": \"Landa\",\"edad\": \"25\",\"rfc\":\"CUPU800825569\",\"email\":\"yaridel@gmail.com\",\"direccion\":\"calle esperanza, num 10 de abril, Temixco Morelos\",\"codigoPostal\":\"62588\",\"referencias\":\"Frente a la base de camiones LOS PEPES\",\"genero\": \"F\"}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 71,
+            "name": "I POST to `host`/clientes/`versionApi`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 72,
+            "name": "response code should be 201",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 73,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 74,
+            "name": "response body path $.mensaje should be El Cliente se ha creado exitosamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 75,
+            "name": "response body path $.codigo should be 201",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 76,
+            "name": "response body path $.detalles.id should be 1000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 77,
+            "name": "response body path $.detalles.nombre should be Yaridel",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 78,
+            "name": "response body path $.detalles.apellidoPaterno should be Arzate",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 79,
+            "name": "response body path $.detalles.apellidoMaterno should be Landa",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 80,
+            "name": "response body path $.detalles.edad should be 25",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 81,
+            "name": "response body path $.detalles.rfc should be CUPU800825569",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 82,
+            "name": "response body path $.detalles.email should be yaridelal435@gmail.com",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 83,
+            "name": "response body path $.detalles.direccion should be calle esperanza, 10 de abril, Temixco Morelos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 84,
+            "name": "response body path $.detalles.codigoPostal should be 62588",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 85,
+            "name": "response body path $.detalles.referencias should be Frente a la base de camiones LOS PEPES",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 86,
+            "name": "response body path $.detalles.genero should be F",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": ";creacion-de-un-cliente-de-banco-poder,-cliente-nuevo-/clientes/versionapi",
+        "keyword": "Scenario",
+        "line": 116,
+        "name": "Creacion de un cliente de banco poder, cliente nuevo /clientes/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 95,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 96,
+            "name": "I set body to {\"nombre\": \"Jovani\",\"apellidoPaterno\": \"Arzate\",\"apellidoMaterno\": \"Cabrera\",\"edad\": \"28\",\"rfc\":\"456787656453454\",\"email\":\"jovaniac@gmail.com\",\"direccion\":\"bugambilias 2, colonia 10 de abril, Temixco Morelos\",\"codigoPostal\":\"0634560\",\"referencias\":\"enfrente de la tortilleria ALFONSOS\",\"genero\": \"M\"}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 97,
+            "name": "I POST to `host`/clientes/`versionApi`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 98,
+            "name": "response code should be 201",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 99,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 100,
+            "name": "response body path $.mensaje should be El Cliente se ha creado exitosamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 101,
+            "name": "response body path $.codigo should be 201",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 102,
+            "name": "response body path $.detalles.id should be 2000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 103,
+            "name": "response body path $.detalles.nombre should be Jovani",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 104,
+            "name": "response body path $.detalles.apellidoPaterno should be Arzate",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 105,
+            "name": "response body path $.detalles.apellidoMaterno should be Cabrera",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 106,
+            "name": "response body path $.detalles.edad should be 28",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 107,
+            "name": "response body path $.detalles.rfc should be 456787656453454sds",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 108,
+            "name": "response body path $.detalles.email should be jovaniac@gmail.com",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 109,
+            "name": "response body path $.detalles.direccion should be bugambilias 2, colonia 10 de abril, Temixco Morelos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 110,
+            "name": "response body path $.detalles.codigoPostal should be 0634560",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 111,
+            "name": "response body path $.detalles.referencias should be enfrente de la tortilleria ALFONSOS",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 112,
+            "name": "response body path $.detalles.genero should be M",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": ";creacion-de-un-cliente-con-datos-incorrectos-/clientes/versionapi",
+        "keyword": "Scenario",
+        "line": 131,
+        "name": "Creacion de un cliente con datos incorrectos /clientes/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 120,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 121,
+            "name": "I set body to {\"nombre\": \"Jovani\",\"apellidoPaterno\": \"Arzate\",\"apellidoMaterno\": \"Cabrera\",\"edad\": \"28s\",\"rfc\":\"456787656453454\",\"email\":\"jovaniac@gmail.com\",\"direccion\":\"bugambilias 2, colonia 10 de abril, Temixco Morelos\",\"codigoPostal\":\"0634560\",\"referencias\":\"enfrente de la tortilleria ALFONSOS\",\"genero\": \"M\"}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 122,
+            "name": "I POST to `host`/clientes/`versionApi`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 123,
+            "name": "response code should be 400",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 124,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 125,
+            "name": "response body path $.codigo should be 400.api-clientes.1000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 126,
+            "name": "response body path $.mensaje should be Los datos del cliente contienen caracteres invalidos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 127,
+            "name": "response body path $.informacion should be Debes introducir correctamente los datos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 128,
+            "name": "response body path $.tracking should be 98755343",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";validamos-cuando-ocurre-un-escenario-no-controlado-/clientes/versionapi",
+        "keyword": "Scenario",
+        "line": 146,
+        "name": "Validamos cuando ocurre un escenario no controlado /clientes/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 135,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 136,
+            "name": "I set body to {\"nombre\": \"Jovani\",\"apellidoPaterno\": \"Arzate\", \"apellidoMaterno\": \"Cabrera\"}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 137,
+            "name": "I POST to `host`/clientes/`versionApi`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 138,
+            "name": "response code should be 500",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 139,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 140,
+            "name": "response body path $.codigo should be 500.api-clientes.1200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 141,
+            "name": "response body path $.mensaje should be Error al realizar la operación.",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 142,
+            "name": "response body path $.informacion should be Ocurrio un error inesperado, intentar nuevamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 143,
+            "name": "response body path $.tracking should be 22920181120162829642",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";actualizar-los-datos-de-los-clientes-/clientes/versionapi",
+        "keyword": "Scenario",
+        "line": 170,
+        "name": "Actualizar los datos de los clientes /clientes/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 150,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 151,
+            "name": "I set body to {\"nombre\": \"Yaridel\",\"apellidoPaterno\": \"Arzate\",\"apellidoMaterno\": \"Reyna\",\"edad\": \"25\",\"rfc\":\"CUPU800825569\",\"email\":\"yaridel@gmail.com\",\"direccion\":\"calle esperanza, num de abril, Temixco Morelos\",\"codigoPostal\":\"62588\",\"referencias\":\"Frente a la base de camiones LOS PEPES\",\"genero\": \"F\"}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 152,
+            "name": "I PUT `host`/clientes/`versionApi`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:108"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 153,
+            "name": "response code should be 200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 154,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 155,
+            "name": "response body path $.mensaje should be Operacion exitosa",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 156,
+            "name": "response body path $.codigo should be 200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 157,
+            "name": "response body path $.detalles.id should be 1000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 158,
+            "name": "response body path $.detalles.nombre should be Yaridel",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 159,
+            "name": "response body path $.detalles.apellidoPaterno should be Arzate",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 160,
+            "name": "response body path $.detalles.apellidoMaterno should be Reyna",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 161,
+            "name": "response body path $.detalles.edad should be 25",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 162,
+            "name": "response body path $.detalles.rfc should be CUPU800825569",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 163,
+            "name": "response body path $.detalles.email should be yaridelal435@gmail.com",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 164,
+            "name": "response body path $.detalles.direccion should be calle esperanza, 10 de abril, Temixco Morelos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 165,
+            "name": "response body path $.detalles.codigoPostal should be 62588",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 166,
+            "name": "response body path $.detalles.referencias should be Frente a la base de camiones LOS PEPES",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 167,
+            "name": "response body path $.detalles.genero should be F",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";actualizar-los-datos-de-los-clientes-con-datos-incorrectos-/clientes/versionapi",
+        "keyword": "Scenario",
+        "line": 185,
+        "name": "Actualizar los datos de los clientes con datos incorrectos /clientes/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 174,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 175,
+            "name": "I set body to {\"nombre\": \"Yaridel\",\"apellidoPaterno\": \"Arzate\",\"apellidoMaterno\": \"Reyna\",\"edad\": \"25s\",\"rfc\":\"CUPU800825569\",\"email\":\"yaridel@gmail.com\",\"direccion\":\"calle esperanza, num de abril, Temixco Morelos\",\"codigoPostal\":\"62588\",\"referencias\":\"Frente a la base de camiones LOS PEPES\",\"genero\": \"F\"}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 176,
+            "name": "I PUT `host`/clientes/`versionApi`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:108"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 177,
+            "name": "response code should be 400",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 178,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 179,
+            "name": "response body path $.codigo should be 400.api-clientes.1000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 180,
+            "name": "response body path $.mensaje should be Los datos del cliente contienen caracteres invalidos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 181,
+            "name": "response body path $.informacion should be Debes introducir correctamente los datos",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 182,
+            "name": "response body path $.tracking should be 98755343",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";actualizar-los-datos-de-los-clientes-con-escenario-inesperado-error-interno-/clientes/versionapi",
+        "keyword": "Scenario",
+        "line": 200,
+        "name": "Actualizar los datos de los clientes con escenario inesperado error interno /clientes/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 189,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 190,
+            "name": "I set body to {\"nombre\": \"Yaridel\",\"apellidoPaterno\": \"Arzate\"}",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:49"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 191,
+            "name": "I PUT `host`/clientes/`versionApi`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:108"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 192,
+            "name": "response code should be 500",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 193,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 194,
+            "name": "response body path $.codigo should be 500.api-clientes.1200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 195,
+            "name": "response body path $.mensaje should be Error al realizar la operación.",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 196,
+            "name": "response body path $.informacion should be Ocurrio un error inesperado, intentar nuevamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 197,
+            "name": "response body path $.tracking should be 22920181120162829642",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";eliminacion-de-empleados-/clientes/versionapi",
+        "keyword": "Scenario",
+        "line": 210,
+        "name": "eliminacion de empleados /clientes/versionApi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/init.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 203,
+            "name": "I DELETE `host`/clientes/`versionApi`?idCliente=3000",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 204,
+            "name": "response code should be 200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 205,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:159"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 206,
+            "name": "response body path $.mensaje should be El Cliente se ha dado de baja exitosamente",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 207,
+            "name": "response body path $.codigo should be 200",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:197"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

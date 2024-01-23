@@ -1,0 +1,168 @@
+  swagger: "2.0"
+  info: 
+    version: "1.0.0"
+    title: "API Usuarios"
+    description: "API de usuarios para la nueva red social"
+    termsOfService: "http://swagger.io/terms/"
+    contact: 
+      name: "coe apis"
+    license: 
+      name: "MIT"
+
+  host: "www.apixcloudservices.com"
+
+  basePath: "/usuarios/v1"
+  
+  schemes: 
+    - "http"
+    - "https"
+  consumes: 
+    - "application/json"
+  produces: 
+    - "application/json"
+
+  paths:
+     /:
+      get:
+        description: "Consulta de usuarios"
+        responses:
+           "200":
+            description: "consulta exitosa"
+            schema:
+              $ref: "#/definitions/UsuariosResponse"
+      post:
+        description: "alta de usuarios"
+        parameters:
+        - name: datos entrada
+          in: body
+          description: datos de alta para usuarios
+          required: true
+          schema:
+            $ref: '#/definitions/UsuariosRequest'
+        produces: 
+          - "application/json"
+        responses:
+           "201":
+            description: "datos de los usuarios"
+            schema:
+              $ref: "#/definitions/UsuariosResponseCreacion"
+      
+      put:
+        description: "actualizacion de usuarios"
+        parameters:
+        - name: datos entrada actualizacion
+          in: body
+          description: datos de alta para usuarios
+          required: true
+          schema:
+            $ref: '#/definitions/UsuariosRequest'
+        produces: 
+          - "application/json"
+        responses:
+           "200":
+            description: "datos de los usuarios"
+            schema:
+              $ref: "#/definitions/UsuariosResponse"
+      delete:
+        description: "elimina usuarios"
+        produces: 
+          - "application/json"
+        responses:
+           "204":
+            description: "elimina usuarios"
+          
+     /{id}:
+      get:
+        description: "Consulta de usuarios"
+        produces: 
+          - "application/json"
+        parameters:
+        - name: id
+          in: path
+          type: integer
+          description: datos de alta para usuarios
+          required: true
+        responses:
+           "200":
+            description: "consulta exitosa"
+            schema:
+              $ref: "#/definitions/UsuariosResponse"
+     /busquedas:  
+      get:
+        description: "Busquedas de usuarios"
+        produces: 
+          - "application/json"
+        parameters:
+        - name: nombre
+          in: query
+          type: string
+          description: datos de alta para usuarios
+          required: true
+        responses:
+           "200":
+            description: "consulta exitosa"
+            schema:
+              $ref: "#/definitions/UsuariosResponse"
+     /{id}/referencias:
+        get:  
+          description: referencias del usuario, conocidos   
+          responses:
+           "200":
+            description: "consulta exitosa"
+            examples:
+             application/json: |-
+              {
+                  "referencias": [
+                      {
+                          "id": "1",
+                          "nombre": "Yaridel",
+                          "apellido": "Landa",
+                          "tipoReferencia":"compañero de trabajo"
+                      },
+                      {
+                          "id": "2",
+                          "nombre": "Beatriz",
+                          "apellido": "Rojas",
+                          "tipoReferencia":"compañero de trabajo"
+                      }
+                  ]
+              }
+
+  definitions:
+      UsuariosResponse: 
+        type: "object"
+        required: 
+        - "nombre"
+        - "apellidoPaterno"
+        - "apellidoMaterno"
+        properties:
+          id:
+            type: "integer"
+          nombre:
+           type: "string"
+          apellidoPaterno:
+           type: "string"
+          apellidoMaterno:
+           type: "string"
+      UsuariosRequest:
+        type: "object"
+        properties:
+          nombre:
+           type: "string"
+          apellidoPaterno:
+           type: "string"
+          apellidoMaterno:
+           type: "string"
+          edad:
+           type: "integer"
+      UsuariosResponseCreacion:
+        type: "object"
+        allOf: 
+         - 
+          $ref: "#/definitions/UsuariosResponse"
+         - 
+          required: 
+            - "id"
+          properties: 
+            status: 
+              type: "integer"

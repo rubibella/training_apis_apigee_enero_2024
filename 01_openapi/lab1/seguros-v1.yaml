@@ -1,0 +1,17 @@
+# Example YAML to get you started quickly.
+# Be aware that YAML has indentation based coping.
+# Code completion support is available so start typing for available options.
+swagger: "2.0"
+
+# This is your document metadata
+info:
+  version: "0.0.1"
+  title: API de Seguros
+  description: |
+   API para poder gestionar las polizas creadas para los créditos otorgados a clientes
+host:
+  wwww.bancopoder.com
+schemes:
+  - https
+basePath: /seguros/v1
+

@@ -1,0 +1,147 @@
+    openapi: 3.0.0
+    info:
+      title: API Usuarios
+      description: API de usuarios
+      version: 1.0.0
+    servers:
+      - url: https://www.apixcloudservices/usuarios/v1
+        description: Optional server description, e.g. Main (production) server
+      - url: http://www.apixcloudservices/usuarios/v1
+        description: Optional server description, e.g. Internal staging server for testing
+
+    paths:
+      /:
+       get:
+        description: "Consulta de usuarios"
+        responses:
+            '200':    # status code
+              description: consulta exitosa
+              content:
+                application/json:
+                  schema: 
+                    $ref: "#/components/schemas/UsuariosResponse"
+       post:
+        description: "alta de usuarios"
+        requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                 $ref: '#/components/schemas/UsuariosRequest'
+        responses:
+           "201":
+            description: "datos de los usuarios"
+            content:
+             application/json:
+              schema:
+                $ref: "#/components/schemas/UsuariosResponseCreacion"
+       delete:
+        description: "elimina usuarios"
+        responses:
+           "204":
+            description: "elimina usuarios"
+      
+      /{id}:
+        get:
+          description: "Consulta de usuarios"
+          parameters:
+            - in: path
+              name: id
+              required: true
+              schema:
+                type: integer
+                format: int64
+                minimum: 1
+              description: datos de alta para usuarios
+          responses:
+            "200":
+              description: "consulta exitosa"
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/UsuariosResponse"
+      /busquedas:  
+       get:
+        description: "Busquedas de usuarios"
+        parameters:
+        - name: nombre
+          in: query
+          schema:
+                type: integer
+                format: int64
+                minimum: 1
+          description: datos de alta para usuarios
+        responses:
+           "200":
+            description: "consulta exitosa"
+            content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/UsuariosResponse"
+      
+      /referencias:
+        get:  
+          description: referencias del usuario, conocidos
+          responses:
+           "200":
+            description: "consulta exitosa"
+            content:
+              application/json:
+                examples:  
+                  datos:
+                    value:  
+                      {
+                          "referencias": [
+                              {
+                                  "id": "1",
+                                  "nombre": "Yaridel",
+                                  "apellido": "Landa",
+                                  "tipoReferencia":"compañero de trabajo"
+                              },
+                              {
+                                  "id": "2",
+                                  "nombre": "Beatriz",
+                                  "apellido": "Rojas",
+                                  "tipoReferencia":"compañero de trabajo"
+                              }
+                          ]
+                      }
+    components:
+       schemas:
+         UsuariosResponse: 
+          type: "object"
+          required: 
+          - "nombre"
+          - "apellidoPaterno"
+          - "apellidoMaterno"
+          properties:
+            id:
+              type: "integer"
+            nombre:
+              type: "string"
+            apellidoPaterno:
+              type: "string"
+            apellidoMaterno:
+              type: "string"
+         UsuariosRequest:
+          type: "object"
+          properties:
+            nombre:
+              type: "string"
+            apellidoPaterno:
+              type: "string"
+            apellidoMaterno:
+              type: "string"
+            edad:
+              type: "integer"
+         UsuariosResponseCreacion:
+          type: "object"
+          allOf: 
+          - 
+            $ref: "#/components/schemas/UsuariosResponse"
+          - 
+            required: 
+              - "id"
+          properties: 
+            status: 
+              type: "integer"
